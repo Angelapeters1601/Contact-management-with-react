@@ -34,6 +34,7 @@ function ContactApp() {
       address,
       imageUrl: imgUrl,
       id: crypto.randomUUID(),
+      createdAt: new Date().toISOString(),
     });
     setName("");
     setAddress("");
@@ -69,8 +70,8 @@ function ContactApp() {
     }
   };
 
-  const handleSortChange = (e) => {
-    setSortCriteria(e.target.value);
+  const handleSortChange = (value) => {
+    setSortCriteria(value);
   };
 
   const handleOpenAddForm = () => {
@@ -78,6 +79,7 @@ function ContactApp() {
   };
 
   const total = contacts.length;
+  const sortedContacts = sortContacts(searchContact, sortCriteria);
 
   return (
     <div className="contact-app">
@@ -88,7 +90,7 @@ function ContactApp() {
       />
       <Sort sortCriteria={sortCriteria} handleSortChange={handleSortChange} />
       <TotalContacts total={total} />
-      <ContactList contacts={searchContact} onDeleteContact={handleDelete} />
+      <ContactList contacts={sortedContacts} onDeleteContact={handleDelete} />
 
       <Button className="btn" onClick={handleOpenAddForm}>
         {openAddForm ? "✖" : "👥+ Add contact"}
