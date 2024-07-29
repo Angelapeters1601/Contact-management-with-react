@@ -19,8 +19,6 @@ function ContactForm({
 
   return (
     <form className="add-form" onSubmit={handleSubmit}>
-      <h2 className="sub-title">Add contact</h2>
-
       <label htmlFor="name">Name:</label>
       <input
         type="text"
