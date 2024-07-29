@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e3f2fd;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 30px;
+  margin-top: 10px;
+  padding: 10px;
+  border-bottom: 2px solid black;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+.contact-app {
+  display: flex;
+  flex-direction: column;
+}
+
+.sub-title {
+  font-size: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  max-height: 380px;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.contact-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.contact-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.contact-header h3 {
+  margin: 0;
+  flex-grow: 1;
+  font-size: 17px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.delete-btn {
+  background: none;
+  border: 1px solid grey;
+  border: none;
+  color: blue;
+  opacity: 0.2;
+  padding: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  margin-left: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.delete-btn:hover {
+  color: red;
+  border: none;
+  opacity: 1;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.contact-item p {
+  margin-top: 5px;
+  font-size: 15px;
+  color: rgb(54, 51, 51);
+  line-height: 17px;
+  margin-bottom: 10px;
+}
+
+.contact-item img {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+.add-form {
+  background-color: transparent;
+  padding: 20px;
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.add-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.add-form input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid grey;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.search {
+  margin-top: 8px;
+  padding: 1px;
+}
+
+.search input {
+  background-color: transparent;
+  border: none;
+  font-size: 15px;
+  letter-spacing: 3px;
+}
+
+.btn {
+  background-color: transparent;
+  padding: 7px;
+  border-radius: 6px;
+  border: 1px solid black;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn:hover {
+  cursor: pointer;
+  color: rgb(111, 196, 196);
+  background-color: black;
+}
+
+.sort select {
+  background-color: #e3f2fd;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  padding: 0 10px 2px 5px;
+  border-radius: 6px;
+  border: 1px solid #2f7882;
+  outline: none;
+  cursor: pointer;
+}
